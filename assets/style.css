@@ -1,0 +1,174 @@
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: #0889ec;
+}
+
+#top-bar {
+    position: absolute;
+    top: 5%;
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    background: #fff;
+    justify-content: space-between;
+    font-weight: 600;
+}
+
+#btm-bar {
+    position: absolute;
+    bottom: 5%;
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    background: #fff;
+    justify-content: center;
+    font-weight: 600;
+}
+
+#startbtn,
+#rules-card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+}
+
+#start {
+    font-size: 24px;
+    font-weight: 400;
+    padding: 10px 20px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    color: #0889ec;
+    background-color: #fff;
+    z-index: 0;
+    cursor: pointer;
+}
+
+#start:hover {
+    border: solid 1px #fff;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #0889ec;
+}
+.rules-title {
+    font-size: 36px;
+    font-weight: 300;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-self:center;
+    border-bottom:solid 1px #817c7c;
+    padding-left: 20%;
+}
+#rules-card {
+    display: none;
+    background: #fff;
+    width: 600px;
+    padding: 20px;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+
+
+.info {
+    padding: 5px;
+}
+
+.info span {
+    font-weight: 600;
+}
+
+#buttons {
+    margin-left: 25%;
+}
+
+button.quit, button.begin {
+    font-size: 24px;
+    font-weight: 400;
+    padding: 10px 20px;
+    outline: none;
+    border: solid;
+    border-radius: 5px;
+    color: #0889ec;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+button.quit:hover, button.begin:hover {
+    color: #fff;
+    background-color: #0889ec;
+    border: #fff;
+    
+}
+
+
+
+
+
+.progress {
+    text-align: end;
+    font-weight: 600;
+}
+
+.quiz-card {
+    
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    background: #fff;
+    width: 600px;
+    min-height: 65%;
+    padding: 20px;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+p#question, .choice-button {
+    padding: 1%;
+    margin: 1%;
+}
+
+div#outcome {
+    align-self:flex-end;
+}
+
+
+
+.ending-card {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    background: #fff;
+    width: 600px;
+    padding: 20px;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+
+
+.results {
+    display: inline-flex;
+    width: 100%;
+    justify-content: space-evenly;
+    margin-top: 30px;
+}
+
+
+#choices {
+  display: flex;
+  flex-direction: column;
+}
