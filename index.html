@@ -46,20 +46,17 @@
             <hr>
             <div class="questions">
                 <div>
-                <p id="question">
-
-                </p>
+                  <p id="question"></p>
                 </div>
                 <div id=choices>
                 <button id=choice0 class="button choice-button"></button>
                 <button id=choice1 class="button choice-button"></button>
                 <button id=choice2 class="button choice-button"></button>
+                </div>
+                <div>
                 <p id="answer"></p>
                 </div>
             </div>
-            <div id="outcome">
-            
-                <p id="outcomeMessage"></p>
             </div>        
         </div>     
     <div class="ending-card">
@@ -67,10 +64,11 @@
             <h2>Congratulations!</h2>
         </div>
         <div class="results">
-            <div class="grade">
-                <p>You scored:<span id="points"></span></p>
-            </div>
-            
+          <div class="points"></div>
+            <form class="leaderboard">
+              <label for="initials">Enter you initials to save your score!</label>
+              <input type="text" id="initials">
+            </form>
         </div>
     </div>
         
