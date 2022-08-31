@@ -1,1 +1,1 @@
-
+Simple HTML, CSS, JavaScript written application. Application is a multiple choice quiz. Lops through questions with 3 choices, compared to an answer. That way the score can be kept and the user can inpput their initials and save their high scores!. Ihope you enjoy this application. I had fun diving deep into understanding the idea of JS functions, arrays, objects, loops, console.log, locale storage and much more.
