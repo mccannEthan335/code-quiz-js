@@ -139,11 +139,14 @@ p#question, .choice-button {
     margin: 1%;
 }
 
-div#outcome {
-    align-self:flex-end;
+
+
+div.results {
+  display: inline-flex;
+  width: 100%;
+  justify-content: space-evenly;
+  margin-top: 30px;
 }
-
-
 
 .ending-card {
     display: none;
@@ -160,12 +163,7 @@ div#outcome {
 
 
 
-.results {
-    display: inline-flex;
-    width: 100%;
-    justify-content: space-evenly;
-    margin-top: 30px;
-}
+
 
 
 #choices {
