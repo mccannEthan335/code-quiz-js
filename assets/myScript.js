@@ -159,27 +159,45 @@ function showTime() {
 //show the question and answer choices for the current question
 function showQuestion() {
   
-  document.querySelector('#question').textContent = questions[currentQuestion]['question'];
-  document.querySelector('#choice0').textContent = questions[currentQuestion]['choices'][0];
-  document.querySelector('#choice1').textContent = questions[currentQuestion]['choices'][1];
-  document.querySelector('#choice2').textContent = questions[currentQuestion]['choices'][2];
-  document.querySelector('#answer').textContent = questions[currentQuestion]['answer'];
-  
+  const Q = document.querySelector('#question').textContent = questions[currentQuestion]['question'];
+  const A = document.querySelector('#choice0').textContent = questions[currentQuestion].choices[0];
+  const B = document.querySelector('#choice1').textContent = questions[currentQuestion].choices[1];
+  const C = document.querySelector('#choice2').textContent = questions[currentQuestion].choices[2];
+  const Ans = document.querySelector('#answer').textContent = questions[currentQuestion]['answer'];
+}
+
 
 
 //behaviour when an answer button is clicked: click event bubbles up to div with id "quiz-choices"
 //eventObject.target identifies the specific button element that was clicked on
+document.querySelector("#choice0").addEventListener("click", nextQuestion);
+
+document.querySelector("#choice1").addEventListener("click", nextQuestion);
+
+document.querySelector("#choice2").addEventListener("click", nextQuestion);
+
+function nextQuestion() {
+  currentQuestion++
+
+  if(currentQuestion < questions.length) {
+    showQuestion(); 
+  } else {
+    quizOver;
+  }
+}
+//Compare the text content of the choice button with the answer to the current question
+
+
+var answer;
+var selection;
+var score = 0;
+var point = 1;
+var penalty = 10;
+//if answer is incorrect, penalise time
 document.querySelector("#choice0").addEventListener("click", checkAnswer);
-
 document.querySelector("#choice1").addEventListener("click", checkAnswer);
-
 document.querySelector("#choice2").addEventListener("click", checkAnswer);
 
-//Compare the text content of the choice button with the answer to the current question
-}
-
-
-//if answer is incorrect, penalise time
 function checkAnswer(event) {
   console.log(score);
   if (questions[currentQuestion].answer === event.target.textContent) {
@@ -204,3 +222,20 @@ function checkAnswer(event) {
   }
 
 
+function showScore() {
+  score = document.getElementById('score');
+  
+  let score = localStorage.getItem(console(score));
+}
+
+
+document.querySelector('#initials').addEventListener(onsubmit, showScore());
+
+
+
+function quizOver() {
+  document.querySelector('.quiz-card').style.display = 'none';
+  document.querySelector('.ending-card').style.display = 'block';
+
+  clearInterval(clock);
+}
